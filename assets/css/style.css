@@ -22,3 +22,63 @@
         height: auto !important;
     }
 }
+
+/* 作品集樣式 */
+.portfolio-section {
+    background-color: #f5f5f5;
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-container {
+    overflow: hidden;
+}
+
+.card-img-container img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.section-title {
+    position: relative;
+    color: #434E5E;
+    font-weight: bold;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    background: #42A8C0;
+    transform: translateX(-50%);
+}
